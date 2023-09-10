@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic styling for the contact list */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Style for contact icons (optional) */
+        .contact-icon {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Main Page</a></li>
+                <li><a href="homepage.html">Home page</a></li>
+                <li><a href="tracking_page.html">Tracking Page</a></li>
+                <li><a href="services_page.html">Services Page</a></li>
+                <li><a href="contact_page.html">Contact Page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2>Contact Information</h2>
+
+    <ul>
+        <li>
+            <span class="contact-icon">&#9742;</span> Phone: +1 (123) 456-7890
+        </li>
+        <li>
+            <span class="contact-icon">&#9993;</span> Email: info@example.com
+        </li>
+    </ul>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="confirmationMessage"></p>
+        <script>
+            const form = document.getElementById("contact-form");
+    
+            // Get the confirmation message element
+            const confirmationMessage = document.getElementById("confirmationMessage");
+    
+            // Add a submit event listener to the form
+            form.addEventListener("submit", function (e) {
+                e.preventDefault(); // Prevent the default form submission
+    
+                // You can perform form submission and processing here (e.g., sending data to a server)
+    
+                // Display a confirmation message
+                confirmationMessage.textContent = "Information submitted successfully!";
+                form.reset(); // Optionally, reset the form fields after submission
+            });
+        </script>
+</body>
+</html>

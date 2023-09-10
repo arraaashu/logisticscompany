@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Main Page</a></li>
+                <li><a href="homepage.html">Home page</a></li>
+                <li><a href="tracking_page.html">Tracking Page</a></li>
+                <li><a href="services_page.html">Services Page</a></li>
+                <li><a href="contact_page.html">Contact Page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2 style="text-align: center;">Shipping</h2>
+    <h4 style="text-align: center;">We offer fast and reliable shipping services to destinations worldwide. Our state-of-the-art warehouses provide secure storage for your goods.</h4>
+    <div class="sections-container">
+        <!-- Left Section -->
+        <div class="section">
+            <ul>
+                <li class="interactive-list" onclick="showText('Freight Forwarding: We seamlessly manage the movement of your goods,ensuring they reach their destination on time and in optimal condition. Whether its international or domestic shipping, count on us for efficient and reliable freight forwarding solutions.')">
+                    <img src="service1.png" alt="Image 1">
+                    <div class="text-container">Freight Forwarding: Click the picture.</div>
+                </li>
+                
+                <li class="interactive-list" onclick="showText('Warehousing and Distribution: Our secure storage facilities and streamlined distribution processes are designed to meet your unique needs. From inventory management to order fulfillment, we help you optimize your supply chain, reduce costs, and enhance customer satisfaction.')">
+                    <img src="service2.png" alt="Image 2">
+                    <div class="text-container">Warehousing and Distribution: Click the picture.</div>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Right Section -->
+        <div class="section">
+            <ul>
+                <li class="interactive-list" onclick="showText('Supply Chain Management: We are your partners in enhancing the efficiency of your supply chain. Our expert team assesses, plans, and implements strategies to streamline your operations, reduce lead times, and increase overall productivity, allowing you to focus on your core business.')">
+                    <img src="service3.png" alt="Image 3">
+                    <div class="text-container">Supply Chain Management: Click the picture.</div>
+                </li>
+                
+                <li class="interactive-list" onclick="showText('Last-Mile Delivery: Our last-mile delivery services are designed to provide a seamless experience for your customers. From final-mile transportation to white-glove delivery, we ensure that your products are delivered safely and on schedule, enhancing your brand reputation for reliability.')">
+                    <img src="service4.png" alt="Image 4">
+                    <div class="text-container">Last-Mile Delivery: Click the picture.</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="text-container">
+        <p id="text"></p>
+    </div>
+
+    <script>
+        function showText(text) {
+            const textContainer = document.getElementById("text");
+            textContainer.innerHTML = `<span style="font-weight: bold; text-align=center;">${text}</span>`;
+        }
+    </script>
+    
+</body>
+</html>

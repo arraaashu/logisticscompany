@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Track Shipment</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function displayResponse() {
+            const userInput = document.getElementById("tracking-code").value;
+            const responseContainer = document.getElementById("response");
+            responseContainer.innerHTML = `The shipment for tracking id: ${userInput} is on the process`;
+            const gifContainer = document.createElement("div");
+            // GIF 1
+            const gifImage1 = document.createElement("img");
+            gifImage1.src = "shipment.gif";
+            gifContainer.appendChild(gifImage1);
+            
+            // GIF 2
+            const gifImage2 = document.createElement("img");
+            gifImage2.src = "track.gif";
+            gifContainer.appendChild(gifImage2);
+            
+            responseContainer.appendChild(gifContainer);
+            document.getElementById("tracking-code").value = "";
+        }
+    </script></head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Main Page</a></li>
+                <li><a href="homepage.html">Home page</a></li>
+                <li><a href="tracking_page.html">Tracking Page</a></li>
+                <li><a href="services_page.html">Services Page</a></li>
+                <li><a href="contact_page.html">Contact Page</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+        <form id="track-form">
+            <label for="tracking-code">Enter Tracking Code:</label>
+            <input type="text" id="tracking-code" required>
+            <button type="submit" onclick="displayResponse()">Track</button>
+        </form>
+        <div id="response"></div>
+</body>
+</html>
